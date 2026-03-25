@@ -1,21 +1,25 @@
-package com.miempresa.student;
+package pe.edu.tecsup.lab01;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class StudentCtrl {
 
-    // Constructor
+    private List<String> estudiantes;
+
     public StudentCtrl() {
+        estudiantes = new ArrayList<>();
     }
 
-    // Métodos que controlarán la lógica del estudiante
-    public void agregarEstudiante() {
-        // TODO: implementar
-    }
-
-    public void eliminarEstudiante() {
-        // TODO: implementar
+    public void agregarEstudiante(String nombre) {
+        estudiantes.add(nombre);
+        System.out.println(nombre + " agregado correctamente.");
     }
 
     public void listarEstudiantes() {
-        // TODO: implementar
+        System.out.println("Lista de estudiantes:");
+        for (String e : estudiantes) {
+            System.out.println("- " + e);
+        }
     }
 }
